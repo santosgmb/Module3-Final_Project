@@ -1,6 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    color: #243e63;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    padding-top: 32px;
+    display: flex;
+}
+
+.row {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.nav__container {
+display: flex;
+justify-content: space-between;
+}
 
 .nav__container {
     width: 100%;
@@ -12,6 +38,21 @@
     margin: 0 auto;
 }
 
-.logo {
+.nav__logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav__logo--title {
+font-weight: 900;
+font-size: 24px;
+margin-left: 12px;
+padding-bottom: 2px;
+letter-spacing: 0.6px;
+}
+
+
+.nav__logo--img {
     width: 40px;
+    height: 40px;
 }
