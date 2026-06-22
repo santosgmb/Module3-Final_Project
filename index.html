@@ -22,16 +22,16 @@
                     <li><a href="#" class="nav__link">Blog</a></li>
                     <li><a href="#" class="nav__link">Pricing</a></li>
                     <li><a href="#" class="nav__link">Contact Us</a></li>
-                    <li><a href="#" class="nav__link">Login</a></li>
+                    <li><a href="#" class="nav__link login">Login</a></li>
                     <li><a href="#features" class="nav__link nav__link--primary">Sign Up</a></li>
                 </ul>   
             </div>
             <button class="btn__menu" onclick="openMenu()">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars btn__menu--svg"></i>
             </button>
             <div class="menu__backdrop">
-                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-                    <i class="fas fa-times"></i>
+                <button class="btn__menu" onclick="closeMenu()">
+                    <i class="fas fa-times btn__menu--close"></i>
                 </button>
                 <ul class="menu__links">
                     <li class="menu__list">
@@ -55,5 +55,24 @@
                 </ul>
             </div>
         </nav>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="header__description">
+                        <h1>Beautiful React Templates <span class="purple">for you.</span></h1>
+                        <p class="header__description--para">Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.</p>
+                        <div class="header__email">
+                            <input type="email" class="header__email--input" placeholder="Your Email Address"></input>
+                            <button class="header__email--btn">Get Started</button>
+                        </div>
+                        <p class="header__customer--title">OUR TRUSTED CUSTOMERS</p>
+                        <img src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" class="header__customers">
+                    </div>
+                    <figure class="header__img--wrapper">
+                        <img src="assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" class="header__img">
+                    </figure>
+                </div>
+            </div>
+        </header>
       </section>  
     </body>

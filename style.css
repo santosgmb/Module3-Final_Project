@@ -12,20 +12,51 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    margin-top: 8px;
+    display: block;
+}
+
+section {
+    padding: 0px 32px;
+}
+
 nav {
     padding-top: 32px;
     display: flex;
 }
 
+li {
+    list-style-type: none;
+}
+
+a {
+    display: inline;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: medium;
+}
+
+.container {
+    padding: 96px 0;
+}
+
 .row {
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.purple {
+color: rgb(100, 21, 255);
 }
 
 .nav__container {
-display: flex;
-justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav__container {
@@ -44,15 +75,192 @@ justify-content: space-between;
 }
 
 .nav__logo--title {
-font-weight: 900;
-font-size: 24px;
-margin-left: 12px;
-padding-bottom: 2px;
-letter-spacing: 0.6px;
+    font-weight: 900;
+    font-size: 24px;
+    margin-left: 12px;
+    padding-bottom: 2px;
+    letter-spacing: 0.6px;
 }
-
 
 .nav__logo--img {
     width: 40px;
     height: 40px;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+}
+
+.nav__link {
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 4px;
+    letter-spacing: 0.35px;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    transition: 300ms;
+    margin: 0 24px;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -6px;
+    height: 2px;
+    width: 100%;
+    background: rgb(100, 21, 255);
+    transition: 300ms;
+    opacity: 0;
+}
+
+.login {
+    margin-left: 48px;
+}
+
+.nav__link--primary {
+    margin: 2px 0px 0px;
+    padding: 10px 32px;
+    border-radius: 9999px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(100, 21, 255);
+    line-height: 1.5;
+    border: medium;
+    width: auto;
+    transition: 300ms;
+}
+
+.nav__link--primary:hover {
+    text-decoration: none;
+    background-color: #5f35b8;
+}
+
+.menu--open .menu__backdrop {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
+.menu__backdrop {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 378px;
+    margin: 24px 16px;
+    padding: 32px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 231, 235);
+    border-radius: 8px;
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(300%);
+    transition: 300ms ease;
+}
+
+.btn__menu {
+    background-color: transparent;
+    border: medium;
+    display: none;
+    transition: 300ms;
+}
+
+.btn__menu--close {
+    position: fixed;
+    top: 24px;
+    right: 18px;
+}
+
+.btn__menu--svg:hover {
+    filter: invert(26%) sepia(94%) saturate(7476%) hue-rotate(261deg) brightness(94%) contrast(115%);
+}
+
+svg.btn__menu--svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+svg.btn__menu--close {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 2px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.menu__links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu__link {
+    color: rgb(26, 32, 44);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 8px 0px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.menu__link--primary {
+color: rgb(247, 250, 252);
+padding: 12px 32px;
+background: rgb(100, 21, 255);
+border-radius: 500px;
+border: medium;
+}
+
+/*
+
+HEADER
+
+*/
+
+.header__description {
+    width: 40%
+}
+
+h1 {
+    font-size: 48px;
+    color: rgb(26, 32, 44);
+    line-height: 1.25;
+}
+
+.header__img--wrapper {
+    width: 60%;
+}
+
+/*
+
+SMALL PHONES, LARGE SMARTPHONES
+
+*/
+
+@media (max-width: 1024px) {
+    .nav__links {
+        display: none;
+    }
+
+    .btn__menu {
+        display: block;
+    }
 }
